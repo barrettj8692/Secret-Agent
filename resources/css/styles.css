@@ -3,15 +3,148 @@ html{
   font-size: 18px;
 }
 body {
+  color:white;
+  font-family: Helvetica;
 
+}
+
+.container {
+  display: flex;
+  margin: auto;
+  max-width: 960px;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
 
 /* Header */
 
+header {
+  background-color: black;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 1.5rem;
+  margin: 0rem 1rem 0rem .5rem;
+}
+
+.logo span{
+  margin: .66rem 0rem .66rem 0rem;
+}
+
+/* Hero */
+
+.hero{
+  background-image: url(../images/moto.jpeg);
+  height: 25rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero_title {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 20rem;
+  margin-top: 9rem;
+}
+
+.hero_title h3{
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 2rem 3rem 0rem 3rem;
+}
+
+.hero_title h1{
+  font-size: 2rem;
+  font-weight: bold;
+  margin: .25rem 3rem 2rem 3rem;
+}
+
+/* Navigation */
+
+.navigation{
+  background-color: firebrick;
+}
+
+nav.container {
+  justify-content: space-between;
+  flex-shrink: 1;
+}
+
+nav span {
+  margin: .75rem 0rem .75rem 0rem;
+}
 
 
-/* Featured */
+/* Shop */
+
+.container.shop {
+  margin-top: 3rem;
+  flex-direction: column;
+  justify-content: space-between;
 
 
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 960px;
+  width: 100%;
+  height: auto;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  overflow: hidden;
+  text-align: center;
+  border: 4px solid black;
+
+
+
+
+
+
+}
+
+.item_image {
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+ .item_image img {
+  height: 9rem;
+  max-height: 9rem;
+  max-width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+}
+
+.item_name {
+  display: block;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+}
 
 /* Locations */
 
