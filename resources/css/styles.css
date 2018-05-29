@@ -9,7 +9,6 @@ body {
 }
 
 .container {
-  display: flex;
   margin: auto;
   max-width: 960px;
 }
@@ -42,6 +41,7 @@ header {
 /* Hero */
 
 .hero{
+
   background-image: url(../images/moto.jpeg);
   height: 25rem;
   background-position: center;
@@ -51,90 +51,81 @@ header {
 
 .hero_title {
   display: flex;
+  position: absolute;
   flex-direction: column;
   background-color: black;
   width: 20rem;
   margin-top: 9rem;
+  padding: 2rem 3rem;
 }
 
 .hero_title h3{
   font-size: 1rem;
   font-weight: bold;
-  margin: 2rem 3rem 0rem 3rem;
+
 }
 
 .hero_title h1{
   font-size: 2rem;
   font-weight: bold;
-  margin: .25rem 3rem 2rem 3rem;
+  margin-top: .25rem;
 }
 
 /* Navigation */
 
 .navigation{
   background-color: firebrick;
+  padding: .75rem 0rem;
 }
 
 nav.container {
+  display: flex;
   justify-content: space-between;
   flex-shrink: 1;
 }
 
-nav span {
-  margin: .75rem 0rem .75rem 0rem;
+.tablet_nav_container {
+  display: none;
 }
 
 
 /* Shop */
 
 .container.shop {
-  margin-top: 3rem;
-  flex-direction: column;
-  justify-content: space-between;
 
 
 }
 
 .items {
   display: flex;
+  margin-top: 3rem;
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 960px;
-  width: 100%;
-  height: auto;
+
 }
 
 .item {
-  display: flex;
-  flex-direction: column;
   width: 30%;
-  overflow: hidden;
-  text-align: center;
-  border: 4px solid black;
-
-
-
-
-
 
 }
 
 .item_image {
-
-
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  padding: 2rem 0rem;
+  height: 9rem;
+  border: 4px solid black;
+
 }
 
 
  .item_image img {
-  height: 9rem;
-  max-height: 9rem;
-  max-width: 100%;
+  max-width: 8rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  overflow: hidden;
 
 }
 
@@ -143,19 +134,136 @@ nav span {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 0.5em;
+    padding: 0.5rem;
 }
 
 /* Locations */
 
+.contact_container{
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-between;
 
+}
 
-/* Contact */
+.contact {
+   display: flex;
+   width: 35%;
+   flex-direction: column;
+ }
 
+ .contact_title {
+   display: block;
+   padding: 1rem 0rem 1rem 3rem;
+   text-align: left;
+   align-items: center;
+   background-color: black;
+ }
 
+ .contact_unit{
+   color: black;
+ }
 
 /* Footer */
 
 footer {
+  display: flex;
+  background-color: black;
+  height: 5rem;
+  width: 100%;
+  margin-top: 3rem;
+  align-items: center;
+}
+
+.footer_text{
+  display: flex;
+  width: 960px;
+  margin: auto;
+}
+
+
+/* tablet */
+
+@media only screen and (max-width:1024px) {
+
+  .navigation .container {
+    display: none;
+  }
+
+ .tablet_nav_container {
+   display: block;
+   text-align: center;
+ }
+
+ .item {
+   width: 47%;
+ }
+
+ .item.row3{
+   display: none;
+ }
+}
+
+
+
+
+/* mobile */
+
+
+@media only screen and (max-width:470px) {
+  .hero {
+    height: 15rem;
+  }
+  .hero_title {
+    width: 100%;
+    padding: 1rem 2rem;
+    margin-top: 10rem;
+  }
+
+  .hero_title h3{
+    font-size: .77rem;
+  }
+
+  .hero_title h1{
+    font-size: 1rem;
+  }
+
+  .navigation .container {
+    display: none;
+  }
+
+ .tablet_nav_container {
+   display: block;
+   text-align: center;
+ }
+
+
+  .item{
+    width:90%;
+    margin: auto;
+  }
+
+  .item.row2, .item.row3 {
+    display: none;
+  }
+
+  .contact_container{
+    flex-direction: column;
+
+  }
+
+  .contact{
+    width: 90%;
+    margin: auto;
+  }
+
+  .contact.hour{
+    margin-top:.5rem
+  }
+
+
+  .footer_text {
+    justify-content: center;
+  }
 
 }
